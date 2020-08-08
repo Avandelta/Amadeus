@@ -1,5 +1,8 @@
 # InteliJ IDEA
 .idea/
+run/
+.gradle/
+build/
 
 # Other
 *.zip
