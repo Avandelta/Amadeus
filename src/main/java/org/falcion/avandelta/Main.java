@@ -1,14 +1,14 @@
 package org.falcion.avandelta;
 
-import org.falcion.avandelta.proxy.ClientProxy;
-import org.falcion.avandelta.proxy.CommonProxy;
-import org.falcion.avandelta.utils.Lore;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.falcion.avandelta.proxy.ClientProxy;
+import org.falcion.avandelta.proxy.CommonProxy;
+import org.falcion.avandelta.utils.Lore;
 
 @Mod(modid = Lore.MODID, name = Lore.MODNAME, version = Lore.VERSION)
 public class Main {

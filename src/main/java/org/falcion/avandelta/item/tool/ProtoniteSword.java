@@ -1,18 +1,19 @@
-package org.falcion.avandelta.item;
+package org.falcion.avandelta.item.tool;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemSword;
 import org.falcion.avandelta.Main;
 import org.falcion.avandelta.init.Items;
 import org.falcion.avandelta.utils.CheckModel;
 
-public class ItemBase extends Item implements CheckModel {
+public class ProtoniteSword extends ItemSword implements CheckModel {
 
-    public ItemBase(String name) {
+    public ProtoniteSword(String name, ToolMaterial material) {
 
+        super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.MATERIALS);
+        setCreativeTab(CreativeTabs.COMBAT);
 
         Items.itemList.add(this);
     }
