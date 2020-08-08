@@ -1,4 +1,4 @@
-package com.falcion.avandelta.proxy;
+package org.falcion.avandelta.proxy;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

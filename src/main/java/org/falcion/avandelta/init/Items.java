@@ -1,7 +1,6 @@
-package com.falcion.avandelta.init;
+package org.falcion.avandelta.init;
 
-import com.falcion.avandelta.item.ItemBase;
-
+import org.falcion.avandelta.item.ItemBase;
 import net.minecraft.item.Item;
 
 import java.util.ArrayList;
@@ -12,4 +11,6 @@ public class Items {
     public static final List<Item> itemList = new ArrayList<Item>();
 
     public static final Item auxiteIngot = new ItemBase("auxite_ingot");
+    public static final Item protoniteIngot = new ItemBase("protonite_ingot");
+    public static final Item gravititeIngot = new ItemBase("gravitite_ingot");
 }

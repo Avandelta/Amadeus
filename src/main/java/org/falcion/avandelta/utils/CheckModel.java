@@ -1,4 +1,4 @@
-package com.falcion.avandelta.utils;
+package org.falcion.avandelta.utils;
 
 public interface CheckModel {
 

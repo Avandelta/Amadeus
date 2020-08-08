@@ -1,12 +1,11 @@
-package com.falcion.avandelta;
+package org.falcion.avandelta;
 
-import com.falcion.avandelta.utils.Lore;
-import com.falcion.avandelta.proxy.CommonProxy;
-
+import org.falcion.avandelta.proxy.ClientProxy;
+import org.falcion.avandelta.proxy.CommonProxy;
+import org.falcion.avandelta.utils.Lore;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,8 +16,8 @@ public class Main {
     @Instance
     public static Main instance;
 
-    @SidedProxy(clientSide = Lore.CLIENT_PROXY_CLASS, serverSide = Lore.COMMON_PROXY_CLASS)
-    public static CommonProxy proxy;
+    public static CommonProxy serverProxy = new CommonProxy();
+    public static ClientProxy clientProxy = new ClientProxy();
 
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event) {

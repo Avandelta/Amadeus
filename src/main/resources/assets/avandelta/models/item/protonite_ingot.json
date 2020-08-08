@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "avandelta:items/auxite_ingot"
+    "layer0": "avandelta:items/protonite_ingot"
   }
 }

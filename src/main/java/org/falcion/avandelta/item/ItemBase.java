@@ -1,13 +1,10 @@
-package com.falcion.avandelta.item;
+package org.falcion.avandelta.item;
 
-import com.falcion.avandelta.Main;
-import com.falcion.avandelta.init.Items;
-import com.falcion.avandelta.utils.CheckModel;
-
+import org.falcion.avandelta.Main;
+import org.falcion.avandelta.init.Items;
+import org.falcion.avandelta.utils.CheckModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-
-import javax.naming.directory.ModificationItem;
 
 public class ItemBase extends Item implements CheckModel {
 
@@ -23,6 +20,6 @@ public class ItemBase extends Item implements CheckModel {
     @Override
     public void registerModels() {
 
-        Main.proxy.registerItemRenderer(this, 0, "inventory");
+        Main.clientProxy.registerItemRenderer(this, 0, "inventory");
     }
 }

@@ -1,4 +1,4 @@
-package com.falcion.avandelta.proxy;
+package org.falcion.avandelta.proxy;
 
 import net.minecraft.item.Item;
 

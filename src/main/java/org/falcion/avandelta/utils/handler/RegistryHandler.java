@@ -1,8 +1,7 @@
-package com.falcion.avandelta.utils.handler;
+package org.falcion.avandelta.utils.handler;
 
-import com.falcion.avandelta.init.Items;
-import com.falcion.avandelta.utils.CheckModel;
-
+import org.falcion.avandelta.init.Items;
+import org.falcion.avandelta.utils.CheckModel;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
