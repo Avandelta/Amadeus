@@ -1,7 +1,7 @@
 [
 {
-  "modid": "amadeus",
-  "name": "Amadeus",
+  "modid": "avandelta",
+  "name": "Avandelta",
   "description": "Модификация, написанная на Java. Создана для редактирования внутриигрового интерфейса и некоторых других элементов Minecraft для упрощения игры пользователя.",
   "version": "${version}",
   "mcversion": "${mcversion}",

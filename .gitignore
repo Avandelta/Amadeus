@@ -10,3 +10,8 @@ build/
 *.gz
 *.log.gz
 *7z
+/bin/
+
+# Eclipse
+.metadata/
+eclipse/

@@ -1,7 +1,7 @@
-package com.falcion.amadeus;
+package com.falcion.avandelta;
 
-import com.falcion.amadeus.utils.Lore;
-import com.falcion.amadeus.proxy.CommonProxy;
+import com.falcion.avandelta.utils.Lore;
+import com.falcion.avandelta.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
