@@ -2,10 +2,10 @@
 {
   "modid": "amadeus",
   "name": "Amadeus",
-  "description": "Модификация, написанная на Java. Создана для редактирования внутриигрового интерфейса и некоторых других элементов Minecraft для упрощения игры пользователя",
+  "description": "Модификация, написанная на Java. Создана для редактирования внутриигрового интерфейса и некоторых других элементов Minecraft для упрощения игры пользователя.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "https:githbub.com/Avandelta/Amadeus",
+  "url": "",
   "updateUrl": "",
   "authorList": ["Falcion"],
   "credits": "",

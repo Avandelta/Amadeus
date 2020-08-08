@@ -1,7 +1,6 @@
 {
     "pack": {
-        "description": "amadeusres",
-        "pack_format": 3,
-        "_comment": ""
+        "description": "Amadeus Resources",
+        "pack_format": 3
     }
 }
