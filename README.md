@@ -1,20 +1,43 @@
-# Amadeus (Avandelta)
+## Amadeus's (Avandelta) Repository
 
-![Последнее обновление](https://img.shields.io/github/last-commit/Avandelta/Amadeus?label=%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5&style=flat-square)
-![Лицензия](https://img.shields.io/github/license/Avandelta/Amadeus?label=%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F&style=flat-square)
+## Packages
 
-## Зависимости
-![Forge](https://img.shields.io/badge/forge-1.12.2%20--%2014.23.5.2854-brightgreen?style=flat-square)
-![Minecraft](https://img.shields.io/badge/Minecraft-1.12.2-orange?style=flat-square)
+** **
 
-## Предисловие
+![Version](https://img.shields.io/github/v/release/Avandelta/Amadeus?color=Yellow&include_prereleases&label=Release&style=for-the-badge)
 
-Amadeus (Avandelta) - модификация, написанная для проекта \"Delta\", для добавления некоторых предметов, изменения интерфейса игры, и прочих дополнительных параметров.
+![Size](https://img.shields.io/github/repo-size/Avandelta/Amadeus?color=Orange&label=Size&style=for-the-badge)
 
-### Контактная информация
+** **
 
-[Ссылка на сервер Discord разработчиков.](https://discord.gg/RAZ7f7x)
+## Information
 
-### Лицензирование репозитории
+**Amadeus** - is a special mod that was written for project Delta. It contains some interface's changes and adding some new features.
 
-Avandelta лицензируется в соотвествии с [MIT License](https://github.com/Avandelta/Kabal/blob/master/LICENSE)
+## License
+
+Repository is licensed under [MIT License](https://github.com/Avandelta/Amadeus/blob/master/LICENSE).
+
+```LICENSE
+MIT License
+
+Copyright (c) 2020 Delta
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
