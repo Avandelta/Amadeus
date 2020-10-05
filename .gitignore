@@ -53,9 +53,14 @@ cmake-build-*/
 
 # IntelliJ
 out/
+
+# Build Cache
 run/
 build/
 dist/
+
+# Auto-Generated
+src/test/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
