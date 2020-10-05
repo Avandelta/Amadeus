@@ -68,7 +68,6 @@ dist/
 # Cache Files
 *.log.gz
 *.log
-*.jar
 *.zip
 
 # Cursive Clojure plugin
