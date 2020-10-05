@@ -58,6 +58,19 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
+# Gradle plugin
+.gradle/
+
+# Cache Data
+build/
+dist/
+
+# Cache Files
+*.log.gz
+*.log
+*.jar
+*.zip
+
 # Cursive Clojure plugin
 .idea/replstate.xml
 
