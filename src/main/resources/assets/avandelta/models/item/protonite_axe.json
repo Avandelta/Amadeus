@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "avandelta:items/protonite_axe"
-  }
-}
