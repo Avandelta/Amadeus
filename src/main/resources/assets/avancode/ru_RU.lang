@@ -1,0 +1,21 @@
+language.name=Russian
+language.region=RU
+language.code=ru_RU
+
+menu.playersTop=§aРейтинг игроков
+
+gui.top.close=Закрыть
+gui.top.column1=%s
+gui.top.column2=%s
+gui.top.column3=%s
+gui.top.lastWinners.column1=%s
+gui.top.lastWinners.column2=%s
+gui.top.lastWinners.column3=%s
+gui.top.column.index=Место
+gui.top.column.playerName=Ник игрока
+gui.top.column.points=Очков
+gui.top.column.reward=Награда
+gui.top.label.info=§aИнформация
+gui.top.label.lastWinners=§aПобедили в прошлый раз
+gui.top.label.searchNotFound=Игрок не найден
+gui.top.textField.search=Поиск по нику игрока...

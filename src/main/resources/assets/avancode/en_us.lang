@@ -1,0 +1,30 @@
+language.name=English
+language.region=US
+language.code=en_US
+
+menu.playersTop=Рейтинг игроков
+
+gui.top.close=Закрыть
+gui.top.column1=%s
+gui.top.column2=%s
+gui.top.column3=%s
+gui.top.lastWinners.column1=%s
+gui.top.lastWinners.column2=%s
+gui.top.lastWinners.column3=%s
+gui.top.column.index=Место
+gui.top.column.playerName=Ник игрока
+
+gui.top.column.general_top.points=Очков
+gui.top.column.kill_player_top.points=Убийств
+gui.top.column.kill_mob_top.points=Убийств
+gui.top.column.death_top.points=Смертей
+gui.top.column.time_top.points=Время
+gui.top.column.distance_top.points=Расстояние
+gui.top.column.jump_top.points=Прыжков
+gui.top.column.money_top.points=Денег
+
+gui.top.column.reward=Награда
+gui.top.label.info=§aИнформация
+gui.top.label.lastWinners=§aПобедили в прошлый раз
+gui.top.label.searchNotFound=Игрок не найден
+gui.top.textField.search=Поиск по нику игрока...

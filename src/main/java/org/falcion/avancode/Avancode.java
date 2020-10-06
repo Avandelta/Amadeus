@@ -3,6 +3,7 @@ package org.falcion.avancode;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -57,6 +58,12 @@ public class Avancode {
         LOGGER.info("Loading.");
         LOGGER.info("Creating network system.");
 
-        network = NetworkManager.registerPacket((IPacketHandler) new PacketHandler)
+        network = NetworkManager.registerPacket((IPacketHandler) new PacketHandler());
+
+        LOGGER.info("Registering event system.");
+        EventSystem eventSystem = new EventSystem();
+        FMLCommonHandler.instance().bus().register(eventSystem);
+
+        LOGGER.info("Loaded successfully!");
     }
 }
