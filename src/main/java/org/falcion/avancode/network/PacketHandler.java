@@ -6,10 +6,8 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.*;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.relauncher.Side;
@@ -18,7 +16,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
 import org.falcion.avancode.Avancode;
 import org.falcion.avancode.Configuration;
-import org.falcion.avancode.gui.GuiScreenTop;
+import org.falcion.avancode.gui.CustomGUI;
 
 import java.util.List;
 import java.util.Map;
@@ -162,9 +160,9 @@ public class PacketHandler implements IPacketHandler {
                 tableValues.put(key, rows);
             }
 
-            GuiScreenTop.fillTables(tableValues);
-            GuiScreenTop.fillLastWinners(tableLastWinners);
-            GuiScreenTop.fillCurrentPlayer(currentPlayer);
+            CustomGUI.fillTables(tableValues);
+            CustomGUI.fillLastWinners(tableLastWinners);
+            CustomGUI.fillCurrentPlayer(currentPlayer);
 
         } else if (id == 1) {
 
@@ -220,7 +218,7 @@ public class PacketHandler implements IPacketHandler {
                 rows.add(Triple.of(Integer.valueOf(rank), playerName, value));
             }
 
-            GuiScreenTop.fillSearch(rows);
+            CustomGUI.fillSearch(rows);
         }
     }
 }

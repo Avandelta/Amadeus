@@ -56,8 +56,17 @@ out/
 
 # Build Cache
 run/
-build/
 dist/
+
+# In-Build Cache
+build/classes
+build/createMcpToSrg
+build/createSrgToMcp
+build/downloadMCMeta
+build/downloadMcpConfig
+build/extractSrg
+build/natives
+build/tmp
 
 # Auto-Generated
 src/test/
