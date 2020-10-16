@@ -14,7 +14,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0'
+version = '30.8.0102'
 group = 'org.falcion.avancode'
 archivesBaseName = 'avancode'
 
