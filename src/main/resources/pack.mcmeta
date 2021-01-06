@@ -1,7 +1,0 @@
-{
-    "pack": {
-        "description": "Resource-pack",
-        "pack_format": 3,
-        "_comment": "Special pack of resources for current modification, if you reading this - you need to know only one thing: format with number 3 means no upper registry for filenames in language and assets packages."
-    }
-}
