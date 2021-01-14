@@ -1,4 +1,4 @@
-package org.falcion.mortem;
+package com.falcion.mortem;
 
 public class Lore {
 

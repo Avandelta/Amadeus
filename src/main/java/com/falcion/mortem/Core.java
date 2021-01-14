@@ -1,4 +1,4 @@
-package org.falcion.mortem;
+package com.falcion.mortem;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
