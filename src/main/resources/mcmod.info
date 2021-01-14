@@ -4,7 +4,7 @@
   "name": "Mortem",
   "description": "PID-Logger and database implementer for Minecraft.",
   "version": "1.12.2",
-  "mcversion": "2.4.1",
+  "mcversion": "2.4.1b",
   "url": "",
   "updateUrl": "",
   "authorList": ["Falcion"],
