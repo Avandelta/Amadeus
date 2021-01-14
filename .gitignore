@@ -10,6 +10,12 @@
 
 # Generated files
 .idea/**/contentModel.xml
+.idea/
+src/test/
+
+# Workspace-Built files
+build/
+run/
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
@@ -21,6 +27,7 @@
 .idea/**/dbnavigator.xml
 
 # Gradle
+.gradle/
 .idea/**/gradle.xml
 .idea/**/libraries
 
