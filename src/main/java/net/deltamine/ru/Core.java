@@ -1,4 +1,4 @@
-package com.falcion.mortem;
+package net.deltamine.ru;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -29,6 +29,7 @@ public class Core {
         String pID = pName.split("@")[0];
 
         LOGGER.info("Minecraft PID: " + pID);
+        LOGGER.info("PID-Name: " + pName.split("@")[1]);
     }
 
     @EventHandler
@@ -38,6 +39,6 @@ public class Core {
 
     @EventHandler
     public void PostInit(FMLPostInitializationEvent event) {
-
+        event.getModState().notifyAll();
     }
 }
