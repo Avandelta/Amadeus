@@ -14,7 +14,23 @@
 src/test/
 
 # Workspace-Built files
-build/
+build/_applyBinpatches_2
+build/_atJar_6
+build/_compileJava_3
+build/_compileJava_5
+build/_postProcess_2
+build/_renameJarInPlace_7
+build/classes
+build/createSrgToMcp
+build/createMcpToSrg
+build/downloadMCMeta
+build/downloadMcpConfig
+build/extractSrg
+build/fg_cache
+build/natives
+build/tmp
+build/reobfJar
+build/libs/OpenEye*.*
 run/
 
 # Sensitive or high-churn files
