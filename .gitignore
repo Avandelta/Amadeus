@@ -30,7 +30,7 @@ build/fg_cache
 build/natives
 build/tmp
 build/reobfJar
-build/libs/OpenEye*.*
+build/libs/PID-Logger*.*
 run/
 
 # Sensitive or high-churn files
