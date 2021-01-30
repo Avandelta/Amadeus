@@ -35,7 +35,7 @@ public class PID {
 
     }
 
-    EventHandler
+    @EventHandler
     public void PostInit(FMLPreInitializationEvent event) {
 
     }
@@ -47,5 +47,8 @@ public class PID {
         String[] pArray = processFullname.split("@");
 
         LOGGER.info("Minecraft PID: " + pArray[1]);
+
+        return pArray[1];
     }
 }
+
