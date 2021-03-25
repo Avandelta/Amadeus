@@ -19,6 +19,8 @@
       w64-10g: '-XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled -Xnoclassgc -XX:UseSSE=3 -Xincgc -Xmx6144M -Xms1024M -XX:PermSize=1024M -XX:MaxPermSize=2048M'
     ]
 
+    
+
   server: 'java -Xincgc -server -Xmx4G -XX:+UseConcMarkSweepGC -XX:G1HeapRegionSize=32 -XX:SurvivorRatio=8 -XX:TargetSurvivorRatio=90 -XX:+AggressiveOpts -XX:+UseFastAccessorMethods -XX:+UseBiasedLocking -XX:+OptimizeStringConcat -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -jar forge-1.12.2-14.23.5.2855.jar nogui -o true'
 
   path: %cd%
