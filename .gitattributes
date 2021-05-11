@@ -137,6 +137,13 @@ Dockerfile                  text
 *.psb                       binary
 *.psd                       binary
 
+# SVG is being treated as an asset/binary by default.
+*.svg                       text
+
+# If you want to treat it as binary, use the
+# following case instead.
+# *.svg                     binary
+
 # Audio files of the project including MIDI.
 #
 # Branch of this type requires LFS to be installed on your
@@ -149,7 +156,7 @@ Dockerfile                  text
 *.ogg                       binary
 *.ra                        binary
 
-# Graphic files of the project including encrypted video.
+# Video files of the project including encrypted video.
 #
 # Branch of this type requires LFS to be installed on your
 # computer.
