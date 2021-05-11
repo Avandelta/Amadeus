@@ -7,15 +7,15 @@
 #
 # Force batch scripts to always use CRLF endings so that if a repository is accessed
 # in Windows via a file share from Linux, the scripts will work.
-*.{cmd, [cC][mM][dD]}        text eol=crlf
-*.{bat, [bB][aA][tT]}        text eol=crlf
+*.{cmd,[cC][mM][dD]}        text eol=crlf
+*.{bat,[bB][aA][tT]}        text eol=crlf
 
 # Force bash scripts to always use LF endings so that if a repository is accessed
 # in Unix via a file share from Windows, the scripts will work.
-*.{sh, [sS][hH]}             text eol=crlf
+*.{sh,[sS][hH]}             text eol=crlf
 
 # Parameter will handle files not defined below.
-*                            text=auto
+*                           text=auto
 
 # Formatting the endings of different files to normalize a text.
 #
