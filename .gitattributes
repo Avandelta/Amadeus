@@ -1,0 +1,212 @@
+# Attributes for JDK-project.
+#
+# Attributes of this mod can be applied to any JDK-project.
+#
+# Auto detect text and leave files detected as binary untouched.
+# Set default behaviour to automatically normalize line endings.
+#
+# Force batch scripts to always use CRLF endings so that if a repository is accessed
+# in Windows via a file share from Linux, the scripts will work.
+*.{cmd, [cC][mM][dD]}        text eol=crlf
+*.{bat, [bB][aA][tT]}        text eol=crlf
+
+# Force bash scripts to always use LF endings so that if a repository is accessed
+# in Unix via a file share from Windows, the scripts will work.
+*.{sh, [sS][hH]}             text eol=crlf
+
+# Parameter will handle files not defined below.
+*                            text=auto
+
+# Formatting the endings of different files to normalize a text.
+#
+# Code including file types for documentation. Do not touch the 
+# branch below because of IDE to normalize file endings.
+*.coffee                    text
+*.css                       text
+*.htm                       text diff=html
+*.html                      text diff=html
+*.inc                       text
+*.ini                       text
+*.js                        text
+*.json                      text
+*.jsx                       text
+*.less                      text
+*.ls                        text
+*.map                       text -diff
+*.od                        text
+*.onlydata                  text
+*.php                       text diff=php
+*.pl                        text
+*.ps1                       text
+*.py                        text diff=python
+*.rb                        text diff=ruby
+*.sass                      text
+*.scm                       text
+*.scss                      text diff=css
+*.sql                       text
+*.styl                      text
+*.tag                       text
+*.ts                        text
+*.tsx                       text
+*.xml                       text
+*.xhtml                     text diff=html
+
+# Branch of the source program code separately from the documentation.
+#
+# You can add custom settings for some different file types. In case
+# of adding filter settings ensure providing additional comments.
+*.java                      text diff=java
+*.javaclass                 text diff=java 
+
+# Source text files for documentation.
+#
+# Some types of files can be ignored by the repository. In this 
+# case comment the unnecessary types.
+*.ipynb                     text
+*.markdown                  text
+*.md                        text
+*.mdwn                      text
+*.mdown                     text
+*.mkd                       text
+*.mkdn                      text
+*.mdtxt                     text
+*.mdtext                    text
+*.txt                       text
+AUTHORS                     text
+CHANGELOG                   text
+CHANGES                     text
+CONTRIBUTING                text
+COPYING                     text
+copyright                   text
+*COPYRIGHT*                 text
+INSTALL                     text
+license                     text
+LICENSE                     text
+NEWS                        text
+*PATCHNOTE*                 text
+readme                      text
+*README*                    text
+TODO                        text
+
+# Configurations of editors and programs.
+#
+# Do not edit this thread because it affects the settings of 
+# text editors and programs.
+*.cnf                       text
+*.cfg                       text
+*.conf                      text
+*.config                    text
+.editorconfig               text
+.env                        text
+.gitattributes              text
+.gitconfig                  text
+.htaccess                   text
+*.lock                      text -diff
+package-lock.json           text -diff
+*.toml                      text
+*.yaml                      text
+*.yml                       text
+browserslist                text
+Makefile                    text
+makefile                    text
+
+# Docker.
+#
+# Docker takes away repetitive mundane configuration tasks and 
+# is used throughout the development.
+Dockerfile                  text
+
+# Graphic files of the project including vector graphic.
+#
+# Branch of this type requires LFS to be installed on your
+# computer.
+*.ai                        binary
+*.bmp                       binary
+*.eps                       binary
+*.gif                       binary
+*.gifv                      binary
+*.ico                       binary
+*.jng                       binary
+*.jp2                       binary
+*.jpg                       binary
+*.jpeg                      binary
+*.jpx                       binary
+*.jxr                       binary
+*.pdf                       binary
+*.png                       binary
+*.psb                       binary
+*.psd                       binary
+
+# Audio files of the project including MIDI.
+#
+# Branch of this type requires LFS to be installed on your
+# computer.
+*.kar                       binary
+*.m4a                       binary
+*.mid                       binary
+*.midi                      binary
+*.mp3                       binary
+*.ogg                       binary
+*.ra                        binary
+
+# Graphic files of the project including encrypted video.
+#
+# Branch of this type requires LFS to be installed on your
+# computer.
+*.3gpp                      binary
+*.3gp                       binary
+*.as                        binary
+*.asf                       binary
+*.asx                       binary
+*.fla                       binary
+*.flv                       binary
+*.m4v                       binary
+*.mng                       binary
+*.mov                       binary
+*.mp4                       binary
+*.mpeg                      binary
+*.mpg                       binary
+*.ogv                       binary
+*.swc                       binary
+*.swf                       binary
+*.webm                      binary
+
+# Archive files of the project.
+#
+# Branch of this type requires LFS to be installed on your
+# computer.
+*.7z                        binary
+*.gz                        binary
+*.jar                       binary
+*.rar                       binary
+*.tar                       binary
+*.zip                       binary
+
+# Font files of the project.
+#
+# Branch of this type requires LFS to be installed on your
+# computer.
+*.ttf                       binary
+*.eot                       binary
+*.otf                       binary
+*.woff                      binary
+*.woff2                     binary
+
+# Executable files of the project via python compiled.
+#
+# Branch of this type requires LFS to be installed on your
+# computer.
+*.exe                       binary
+*.pyc                       binary
+
+# RC files of the project.
+#
+# Files of static code analysis tool for identifying problematic
+# patterns of different programming languages (as ESLint).
+*.*rc                       text
+
+# Ignore files of the project.
+#
+# Files of static code analysis tool for identifying different
+# file types and ignoring them in specified subsystem.
+*.*ignore                   text
