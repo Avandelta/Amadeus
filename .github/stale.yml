@@ -1,0 +1,58 @@
+# Configuration for stale configuring workflow.
+#
+# Number of days of inactivity before an issue or pull request become stale.
+daysUntilStale: 60
+
+# Number of days of inactivity before an issue or pull requests with the stale label is closed.
+# Set to false to disable. If disabled, issues still need to be closed manually, but will remain 
+# marked as stale.
+daysUntilClose: 14
+
+# Only issues or pull requests with all of these labels are check if stale.
+# Set to as [] to disable.
+onlyLabels: []
+
+# Issues or pull requests with these labels will never be considered stale.
+# Set to as [] to disable.
+exemptLabels:
+  - Review
+  - Testing
+  - Updating
+  - Unsupported
+
+# Ignore ignore issues in a project.
+exemptProjects: false
+
+# Ignore issues in a milestone.
+exemptMilestones: false
+
+# Ignore issues with an assignee.
+exemptAssignees: false
+
+# Label to use when marking as stale.
+staleLabel: Stale
+
+# Comment to post when marking as stale.
+markComment: >
+  Issue was marked as stale because of no activity of discussioning at it.
+# Comment to post when removing the stale label.
+unmarkComment: >
+  Issue was unmarked as stale because of recent activity of discussioning at it.
+closeComment: >
+  Issue was automatically closed due no response from the original author either 
+  topic of the issue became stale.
+# Limiting the number of actions per hour, from 1 to 30.
+limitPerRun: 24
+
+# Limiting to only issues either pull requests.
+only: issues
+
+# Optionally, specify configuration settings that are specific to just 'issues' or 'pulls':
+# pulls:
+#   daysUntilStale: 28
+#   markComment: >
+#     Pull request was marked as stale because of no activity of discussioning at it.
+
+# issues:
+#   exemptLabels:
+#     - 

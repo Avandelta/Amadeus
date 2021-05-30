@@ -1,0 +1,2 @@
+# Disabling blank (non-template) issues in repository.
+blank_issues_enabled: false
