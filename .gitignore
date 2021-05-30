@@ -31,6 +31,7 @@ hs_err_pid*
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -72,6 +73,14 @@ cmake-build-*/
 
 # File-based project format
 *.iws
+
+# Gradlew output (downloads)
+.gradle/
+
+# Removing 'run' and 'test' folders from JDK-project
+run/
+build/
+src/test
 
 # IntelliJ
 out/
