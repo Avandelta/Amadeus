@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "pidlogger",
+  "name": "PID Logger",
+  "description": "Mod for debugging PID and current UUID of player.",
+  "version": "1.0",
+  "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Falcion"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

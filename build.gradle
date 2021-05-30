@@ -16,7 +16,7 @@ apply plugin: 'maven-publish'
 
 version = '1.0'
 group = 'deltamine.ru' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'fautor'
+archivesBaseName = 'pidlogger'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -115,3 +115,5 @@ publishing {
         }
     }
 }
+
+sourceSets { main { output.resourcesDir = output.getClassesDirs().getAsPath() } }

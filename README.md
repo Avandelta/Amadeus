@@ -1,6 +1,6 @@
-# Fautor
+# PID Logger
 
-Fautor is a Minecraft mod that displays current UUID and PID.
+PID Logger is a Minecraft mod that displays current UUID and PID (Process ID).
 
 ## Prerequisites
 
