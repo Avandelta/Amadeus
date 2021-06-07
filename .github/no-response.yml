@@ -1,0 +1,13 @@
+# Configuration for responding workflow.
+#
+# Number of days of inactivity before an Issue is closed for lack of response.
+daysUntilClose: 14
+
+# Label requiring a response.
+responseRequiredLabel: No Response
+
+# Comment to post when closing an Issue for lack of response. 
+# Set to false to disable this.
+closeComment: >
+  Issue was automatically closed due no response from the original author either 
+  topic of the issue became stale.
