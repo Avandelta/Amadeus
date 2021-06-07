@@ -1,0 +1,16 @@
+# Configurations specified by user in IDEs.
+.idea/
+
+# In-workspace files built by IDEs.
+build/
+!**//libs/
+
+# Environment for program debugging.
+run/
+**/test/
+
+# Packages imported from custom MDK (or downloaded by IDEs).
+.gradle/
+
+# Project formatting of files.
+*.iws
