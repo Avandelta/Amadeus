@@ -1,0 +1,258 @@
+[alias]
+    # Displaying aliases of current config.
+        aliases                     = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+
+    # Settings of the repository.
+        bc                          = rev-parse --abbrev-ref HEAD
+        bu                          = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+
+    # Setting up the stream.
+        set-up-stream               = !git branch --set-upstream-to=$(git bu)
+
+    # Deleting the branch of the repository.
+        delete-branches             = branch -D
+
+    # Displaying of branches.
+        display-branch              = !git branch
+        display-branch-all          = !git branch -a
+
+    # Listing the files of GIT.
+        ls                          = ls-files
+
+    # Switch between the branches.
+        co-main                     = !git checkout main && git pull origin main
+        co-res-dev                  = !git checkout release/dev && git pull origin $(git bc)
+        co-staging                  = !git checkout release/build && git pull origin $(git bc)
+
+    # Checkout of the repository.
+        co                          = checkout
+        co-branch                   = checkout -b
+
+    # Committing in the repository.
+        cm                          = !git commit -m
+        cm-add                      = !git add -A && git cm
+        cm-edit                     = commit -a --amend
+        amend                       = !git commit --amend --no-edit
+        amend-all                   = !git add -A && git amend
+
+        # Editing the message of commit.
+            reword                  = commit --amend
+
+        # Cancel the effect of commit.
+            uncommit                = reset --soft HEAD~1
+
+    # Fetching commits and branches.
+        read                        = !git fetch -p
+        read-all                    = !git fetch -a -p
+
+    # Updating the master.
+        up                          = !git pull --rebase --prune $@
+        update                      = !git read && git rebase origin/main
+        update-main                 = !git pull origin main
+        update-branch               = !git pull origin $(git bc)
+
+    # Pushing inside the repository.
+        push-master                 = push origin main
+        push-branch                 = !git push origin $(git bc)
+
+    # Force pushing of commit without lease of different code.
+        push-with-lease             = push --force-with-lease
+
+    # Submodules of the repository.
+        update-sm                   = !git pull --recurse-submodules && git submodule update --init --recursive
+        cm-sm                       = !git cm "SUBMODULE REFERENCE UPDATED"
+
+    # Changes and their saving.
+        save                        = !git add -A && git commit -m 'SAVEPOINT'
+        wip                         = commit -am "WIPPOINT"
+
+    # Replaying of each other commit due rebasing with the standard commit.
+        rebase-with-hooks           = rebase -x 'git reset --soft HEAD~1 && git commit -C HEAD@{1}'
+
+    # Resetting the changes.
+        undo                        = reset HEAD~1 --mixed
+        unstage                     = reset
+        uncommit                    = reset --soft HEAD^
+        reset-head                  = reset HEAD --hard
+        reset-branch                = reset --hard $(git bu)
+        wipe                        = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
+    # Merging changes inside the branch.
+        mg                          = !git merge
+        mg-nf                       = !git merge --no-ff
+
+    # Logging.
+        lg                          = log
+        lg-lite                     = log --oneline --decorate
+        lg-latest                   = log --abbrev-commit --decorate --format=format:'%C(bold red)%h%C(reset) - %C(bold blue)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold yellow)%d%C(reset) %n''%C(dim yellow)%H%C(reset) - %C(white)%s%C(reset) %n''%C(green)-(Committer: %cn <%ce>)%C(reset) %C(dim white)-(Author: %an <%ae>)%C(reset)' -1 HEAD --stat
+        lg-branch                   = log --graph --abbrev-commit --decorate --format=format:'%C(bold red)%h%C(reset) - %C(bold blue)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold yellow)%d%C(reset) %n''%C(dim yellow)%H%C(reset) - %C(white)%s%C(reset) %n''%C(green)-(Committer: %cn <%ce>)%C(reset) %C(dim white)-(Author: %an <%ae>)%C(reset)' HEAD --stat
+        lg-all                      = log --graph --abbrev-commit --decorate --format=format:'%C(bold red)%h%C(reset) - %C(bold blue)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold yellow)%d%C(reset) %n''%C(dim yellow)%H%C(reset) - %C(white)%s%C(reset) %n''%C(green)-(Committer: %cn <%ce>)%C(reset) %C(dim white)-(Author: %an <%ae>)%C(reset)' --all --stat
+        lg-mychange                 = "!myname=$(git config --get user.name);myemail=$(git config --get user.email); git log --graph --abbrev-commit --decorate --author $myemail " HEAD --stat
+
+[core]
+    # Disable paginating of repository by default.
+        pager                       = cat
+
+    # Configuring the IGNORE of the repository.
+        excludesfile                = ~/.gitignore
+
+    # Declaring mode of commands that output paths will quote.
+        quotepath                   = false
+
+    # Setting the endings of line inside the files of repository.
+        autocrlf                    = input
+        safecrlf                    = warn
+
+    # Launching an editor via specified value.
+        editor                      = emacsclient -t -a emacs
+
+[color]
+    # Enabling UI of coloured consoles.
+        ui                          = true
+        pager                       = true
+        interactive                 = auto
+        grep                        = always
+        decorate                    = always
+        showbranch                  = always
+
+[color "branch"]
+    # Enabling colouring in output of branches.
+        current                     = green bold
+        local                       = magenta
+        remote                      = cyan
+
+[color "diff"]
+    # Enabling colouring in output of differences between merging.
+        old                         = red
+        new                         = green
+        meta                        = cyan
+        frag                        = magenta
+        whitespace                  = yellow reverse
+    
+[color "status"]
+    # Enabling colouring in output of status of the repository.
+        added                       = green
+        branch                      = green bold
+        changed                     = cyan
+        deleted                     = red dim
+        untracked                   = magenta
+
+[branch]
+    autosetuprebase                 = always
+
+[branch "main"]
+    rebase                          = true
+
+[diff]
+    # Declaring default tool of differences between merging.
+        tool                        = code
+
+    # Enabling showing up the renames.
+        renames                     = true
+
+    # Assuming difference with specified regex.
+        wordRegex                   = .
+
+    # Displaying information of submodules.
+        submodule                   = log
+
+    # Enabling better and descriptive initals.
+        mnemonicPrefix              = true
+
+[difftool]
+    # Disabling prompt of differences.
+        prompt                      = false
+
+[difftool "vscode"]
+    # Declaring default command to setup default editor.
+        cmd                         = code --wait --diff $LOCAL $REMOTE
+
+[fetch]
+  # Enabling the auto-fetch of submodules.
+        recurseSubmodules           = on-demand
+
+[grep]
+    # Setting up the highlight matches.
+        break                       = true
+        heading                     = true
+        lineNumber                  = true
+
+    # Considering most of regex.
+        extendedRegexp              = true
+
+[log]
+    # Automatically follow via single path.
+        follow                      = true
+
+    # Disabling decorate of reference logging.
+        decorate                    = false
+
+    # Using abbreviature SHAs via lesser than fourty symbols.
+        abbrevCommit                = true
+
+[credential]
+    # External helping module of credentials.
+        helper                      = osxkeychain
+
+    # Acquiring credentials consider component of an HTTP to be important.
+        useHttpPath                 = true
+
+[merge]
+    # Displaying common ancestering blocks in conflict hunks.
+        ff                          = false
+
+[mergetool]
+    # Clean up backup files created by merging editor.
+        keepBackup                  = false
+
+    # Clean up temporary files created by merging editor on exit.
+        keepTemporaries             = false
+
+    # Putting temporary files in a dedicated directory.
+        writeToTemp                 = true
+
+    # Auto accepting file prompts via launching merging modules.
+        prompt                      = false
+
+[page]
+    show                            = diff-so-fancy | less --tabs=4 -RFX
+
+[pull]
+    rebase                          = merges
+
+[push]
+    # Default push should only push the current branch to the push target.
+        default                     = upstream
+
+    # Via pushing edit tags with commits are now reachable upstream.
+        followTags                  = true
+
+[rebase]
+    # Rebase advanced usage.
+        autoSquash                  = true
+
+    # Automatically stash current widthdrawal and stage in case of running rebase.
+        autoStash                   = true
+
+[rerere]
+    enabled                         = true
+    autoupdate                      = true
+
+[status]
+    # Display submodule referencing change summaries in status.
+        submoduleSummary            = true
+
+    # Recursively traverse untracked directories to display all context.
+        showUntrackedFiles          = all
+
+[tag]
+    # Enabling sorting algorithm of tags inside repository by numbers.
+        sort                        = version:refname
+
+[versionsort]
+  prereleaseSuffix                  = -pre
+  prereleaseSuffix                  = .pre
+  prereleaseSuffix                  = -beta
+  prereleaseSuffix                  = .beta
+  prereleaseSuffix                  = -rc
+  prereleaseSuffix                  = .rc
