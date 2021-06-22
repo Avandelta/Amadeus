@@ -1,6 +1,6 @@
 [alias]
     # Displaying aliases of current config.
-        aliases                     = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+    aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
 
     # Settings of the repository.
         bc                          = rev-parse --abbrev-ref HEAD
