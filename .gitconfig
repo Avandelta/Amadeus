@@ -17,7 +17,7 @@
         display-branch-all          = !git branch -a
 
     # Listing the files of GIT.
-        ls                          = ls-files
+    ls = ls-files
 
     # Switch between the branches.
         co-main                     = !git checkout main && git pull origin main
