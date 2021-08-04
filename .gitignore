@@ -1,7 +1,5 @@
 # IGNORE for a JDK-project.
 #
-# IGNORE of this style could be applied to any JDK-project.
-#
 # Configurations specified by-user in IDEs.
 
 .idea/
