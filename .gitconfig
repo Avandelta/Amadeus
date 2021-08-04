@@ -1,0 +1,165 @@
+# .gitconfig is currently under refactoring process.
+# If you want to use it or use it's aliases, please, be aware of errors.
+
+[core]
+    pager = cat
+    excludesfile = ~/.gitignore
+    quotepath = false
+    autocrlf = input
+    safecrlf = warn
+    editor = emacsclient -t -a emac
+
+[color]
+    ui = true
+    pager = true
+    interactive = auto
+    grep = always
+    decorate = always
+    showbranch = always
+
+[color "branch"]
+    current = green bold
+    local = magenta
+    remote = cyan
+
+[color "diff"]
+    old = red
+    new = green
+    meta = cyan
+    frag = magenta
+    whitespace = yellow reverse
+
+[color "status"]
+    added = green
+    branch = green bold
+    changed = cyan
+    deleted = red dim
+    untracked = magenta
+
+[branch]
+    autosetuprebase = always
+
+[branch "main"]
+    rebase = true
+
+[diff]
+    tool = code
+    renames = true
+    wordRegex = .
+    submodule = log
+    mnemonicPrefix = true
+
+[difftool]
+    prompt = false
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[fetch]
+    recurseSubmodules = on-demand
+
+[grep]
+    break = true
+    heading = true
+    lineNumber = true
+    extendedRegexp = true
+
+[log]
+    follow = true
+    decorate = false
+    abbrevCommit = true
+
+[credential]
+    helper = osxkeychain
+    useHttpPath = true
+
+[merge]
+    ff = false
+    keepTemporaries = false
+    writeToTemp = true
+    prompt = false
+
+[page]
+    show = diff-so-fancy | less --tabs=4 -RFX
+
+[pull]
+    rebase = merges
+
+[push]
+    default = upstream
+    followTags = true
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[status]
+    submoduleSummary = true
+    showUntrackedFiles = all
+
+[tag]
+    sort = version:refname
+
+[versionsort]
+  prereleaseSuffix = -pre
+  prereleaseSuffix = .pre
+  prereleaseSuffix = -beta
+  prereleaseSuffix = .beta
+  prereleaseSuffix = -rc
+  prereleaseSuffix = .r
+
+# Aliases will be reworked in future.
+
+[alias]
+    aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+    bc = rev-parse --abbrev-ref HEAD
+    bu = = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+    set-up-stream = !git branch --set-upstream-to=$(git bu)
+    delete-branches = branch -D
+    display-branch = !git branch
+    display-branch-all = !git branch -a
+    ls = ls-files
+    co-main = !git checkout main && git pull origin main
+    co-res-dev = !git checkout release/dev && git pull origin $(git bc)
+    co-staging  = !git checkout release/build && git pull origin $(git bc)
+    co = checkout
+    co-branch = checkout -b
+    cm = !git commit -m
+    cm-add = !git add -A && git cm
+    cm-edit = commit -a --amend
+    amend = !git commit --amend --no-edit
+    amend-all = !git add -A && git amend
+    reword = commit --amend
+    uncommit = reset --soft HEAD~1
+    read = !git fetch -p
+    read-all = !git fetch -a -p
+    up = !git pull --rebase --prune $@
+    update = !git read && git rebase origin/main
+    update-main = !git pull origin main
+    update-branch = !git pull origin $(git bc)
+    push-main = push origin main
+    push-branch = !git push origin $(git bc)
+    push-with-lease = push --force-with-lease
+    update-sm = !git pull --recurse-submodules && git submodule update --init --recursive
+    cm-sm = !git cm "SUBMODULE REFERENCE UPDATED"
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    wip = commit -am "WIPPOINT"
+    rebase-with-hooks = rebase -x 'git reset --soft HEAD~1 && git commit -C HEAD@{1}'
+    undo = reset HEAD~1 --mixed
+    unstage = reset
+    uncommit = reset --soft HEAD^
+    reset-head = reset HEAD --hard
+    reset-branch = reset --hard $(git bu)
+    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --har
+    mg = !git merge
+    mg-nf = !git merge --no-f
+    lg = log
+    lg-lite = log --oneline --decorate
+    lg-latest = log --abbrev-commit --decorate --format=format:'%C(bold red)%h%C(reset) - %C(bold blue)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold yellow)%d%C(reset) %n''%C(dim yellow)%H%C(reset) - %C(white)%s%C(reset) %n''%C(green)-(Committer: %cn <%ce>)%C(reset) %C(dim white)-(Author: %an <%ae>)%C(reset)' -1 HEAD --stat
+    lg-branch = log --graph --abbrev-commit --decorate --format=format:'%C(bold red)%h%C(reset) - %C(bold blue)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold yellow)%d%C(reset) %n''%C(dim yellow)%H%C(reset) - %C(white)%s%C(reset) %n''%C(green)-(Committer: %cn <%ce>)%C(reset) %C(dim white)-(Author: %an <%ae>)%C(reset)' HEAD --stat
+    lg-all = log --graph --abbrev-commit --decorate --format=format:'%C(bold red)%h%C(reset) - %C(bold blue)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold yellow)%d%C(reset) %n''%C(dim yellow)%H%C(reset) - %C(white)%s%C(reset) %n''%C(green)-(Committer: %cn <%ce>)%C(reset) %C(dim white)-(Author: %an <%ae>)%C(reset)' --all --stat
+    lg-mychange = "!myname=$(git config --get user.name);myemail=$(git config --get user.email); git log --graph --abbrev-commit --decorate --author $myemail " HEAD --stat
