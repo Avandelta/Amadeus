@@ -1,6 +1,8 @@
 # .gitconfig is currently under refactoring process.
 # If you want to use it or use it's aliases, please, be aware of errors.
 
+# For reference with commits: see https://github.com/Avandelta/Arbitrum/blob/f0eabf35844375a6fb141db530eee0b429a411ef/.gitconfig
+
 [core]
     pager = cat
     excludesfile = ~/.gitignore
