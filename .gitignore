@@ -8,7 +8,7 @@ build/
 run/
 **/test/
 
-# Import from custom MDK (either downloaded by IDEs).
+# Import from custom MDK.
 .gradle/
 
 # Formatting of fi

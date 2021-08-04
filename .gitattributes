@@ -232,11 +232,11 @@ Procfile                    text
 
 # Formatting the endings of scripts to normalize scripting.
 #
-# BATCH-Scripts.
+# BATCH-Files.
 
 *.{cmd,[cC][mM][dD]}        text eol=crlf
 *.{bat,[bB][aA][tT]}        text eol=crlf
 
-# BASH-Scripts.
+# BASH-Files.
 
 *.{sh,[sS][hH]}             text eol=crlf
