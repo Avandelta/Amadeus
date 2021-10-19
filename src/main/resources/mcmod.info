@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pid-logger",
+  "name": "PID-Logger",
+  "description": "(Process ID)-Logger with custom UUID generator for current session. For additional legal information, see the confidential policy. ",
+  "version": "1.1",
+  "mcversion": "[1.12.2]",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Falcion"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
